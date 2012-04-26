@@ -17,11 +17,14 @@
 (when (eq system-type 'windows-nt)
   (set-default-font "Courier New-12"))
 
-;; title format
-(setq frame-title-format '("" user-login-name "" invocation-name " - " "%b"))
-
 ;; browser
 (when (eq system-type 'windows-nt)
   (setq browser-path "c:/Users/dzmitry_hancharou@epam.com/AppData/Local/Google/Chrome/Application/chrome.exe")
   (setq browse-url-browser-function 'browse-url-generic
               browse-url-generic-program browser-path))
+
+;; encoding
+(setq default-buffer-file-coding-system 'utf-8)
+(setq default-input-method 'russian-computer)
+(setq muse-html-encoding-default 'utf-8)
+(setq muse-html-charset-default "utf-8")
