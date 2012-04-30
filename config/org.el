@@ -54,3 +54,6 @@
 (org-clock-persistence-insinuate)
 
 ;;; Tracking
+
+;;; Make sure that timestamps appear in English
+(setq system-time-locale "C")
