@@ -1,16 +1,23 @@
-;; Settings for home machine (ubuntu)
+;;; Dropbox directory location
+;; home (ubuntu)
 (when (and (string-equal "dimas" (user-login-name)) (eq system-type 'gnu/linux))
-  (setq dropbox-directory "~/notes/Dropbox/")
-  (setq im-at-home t))
-;; Settings for home machine (win7)
+  (setq dropbox-directory "~/notes/Dropbox/"))
+;; home (win7)
 (when (and (string-equal "dimas" (user-login-name)) (eq system-type 'windows-nt))
-  (setq dropbox-directory "d:/trash/Dropbox/"))
-;; Settings for work machine
+  (setq dropbox-directory "D:/home/Dropbox/"))
+;; workstation (win7)
 (when (string-equal "Dzmitry_Hancharou" (user-login-name))
-  (setq dropbox-directory "d:/Home/dropbox/")
-  (setq im-at-work t))
+  (setq dropbox-directory "D:/Home/Dropbox/"))
 
-(setq plugins-directory (concat dropbox-directory "emacs/plugins/"))
+;;; Emacs.d location
+(setq user-emacs-directory (concat dropbox-directory "emacs/.emacs.d/"))
 
+;;; Packaging
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
+;;; Customization
 (load "config/custom.el")
 (load "config/org.el")
