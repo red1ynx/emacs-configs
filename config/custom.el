@@ -20,3 +20,8 @@
 (setq default-input-method 'russian-computer)
 (setq muse-html-encoding-default 'utf-8)
 (setq muse-html-charset-default "utf-8")
+
+;;
+(setq inhibit-startup-message t)
+(setq initial-scratch-message "")
+
