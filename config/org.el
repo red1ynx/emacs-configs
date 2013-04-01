@@ -52,5 +52,10 @@
 
 ;;; Tracking
 
+
 ;;; Make sure that timestamps appear in English
 (setq system-time-locale "C")
+
+;;; Mobile org
+(setq org-mobile-directory (concat dropbox-directory "notes/mobileorg"))
+(setq org-mobile-inbox-for-pull (concat dropbox-directory "notes/org/inbox.org"))
