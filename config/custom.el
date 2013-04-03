@@ -21,3 +21,14 @@
 (setq muse-html-encoding-default 'utf-8)
 (setq muse-html-charset-default "utf-8")
 
+(setq make-backup-files         nil) ; Don't want any backup files
+(setq auto-save-list-file-name  nil) ; Don't want any .saves files
+(setq auto-save-default         nil) ; Don't want any auto saving
+
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+
+(require 'linum)
+(setq linum-format "%d")
+(global-linum-mode 1)
