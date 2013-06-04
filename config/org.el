@@ -15,6 +15,9 @@
 			     (concat org-directory "gibberish.org")
 			     (concat org-directory "holidays.org")))
 
+;;; Custom keybindings
+(global-set-key (kbd "<f12>") 'org-agenda-list)
+
 ;;; Tasks and States
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!/!)")
