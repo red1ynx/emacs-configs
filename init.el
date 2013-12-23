@@ -8,6 +8,9 @@
 ;; workstation (win7)
 (when (string-equal "Dzmitry_Hancharou" (user-login-name))
   (setq dropbox-directory "D:/Home/Dropbox/"))
+;; workstation (win7-notebook)
+(when (string-equal "goncharov" (user-login-name))
+  (setq dropbox-directory "C:/home/Dropbox/"))
 
 ;;; Emacs.d location
 (setq user-emacs-directory (concat dropbox-directory "emacs/.emacs.d/"))
