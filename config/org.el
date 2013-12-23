@@ -62,3 +62,7 @@
 ;;; Mobile org
 (setq org-mobile-directory (concat dropbox-directory "notes/mobileorg"))
 (setq org-mobile-inbox-for-pull (concat dropbox-directory "notes/org/inbox.org"))
+
+;;; Custom agendas
+(setq org-agenda-custom-commands
+      '(("b" tags "read")))
