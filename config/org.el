@@ -65,4 +65,5 @@
 
 ;;; Custom agendas
 (setq org-agenda-custom-commands
-      '(("b" tags "read")))
+      '(("b" "Must read" tags "read")
+	("c" "Challenge for 2014" tags "2014")))
