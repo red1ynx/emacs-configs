@@ -62,6 +62,8 @@
 ;;; Mobile org
 (setq org-mobile-directory (concat dropbox-directory "notes/mobileorg"))
 (setq org-mobile-inbox-for-pull (concat dropbox-directory "notes/org/inbox.org"))
+(add-hook 'after-init-hook 'org-mobile-pull)
+(add-hook 'kill-emacs-hook 'org-mobile-push)
 
 ;;; Custom agendas
 (setq org-agenda-custom-commands
